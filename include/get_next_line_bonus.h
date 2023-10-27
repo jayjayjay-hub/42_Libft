@@ -19,6 +19,7 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 100
+#  define OPEN_MAX 1024
 # endif
 
 char	*get_next_line(int fd);
