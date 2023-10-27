@@ -59,7 +59,6 @@ $(OBJ_DIR):
 
 clean:
 	${RM} ${OBJ_DIR}
-	$(RM) $(OBJD) 
 
 fclean: clean
 	${RM} ${NAME}
