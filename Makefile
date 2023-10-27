@@ -70,4 +70,4 @@ norm:
 	@norminette $(SRCS) $(INCLUDE) | grep Error || true
 	@echo " finish"
 
-.PHONY : all bouns clean fclean re
+.PHONY : all bouns clean fclean re norm
