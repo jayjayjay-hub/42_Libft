@@ -6,7 +6,7 @@
 /*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 12:54:28 by jtakahas          #+#    #+#             */
-/*   Updated: 2023/10/02 19:35:43 by jtakahas         ###   ########.fr       */
+/*   Updated: 2023/10/27 18:47:02 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,37 +58,3 @@ int	ft_printf(const char *str, ...)
 	va_end(list);
 	return ((int)length_sum);
 }
-
-// __attribute__((destructor))
-// static void destructor() {
-//     system("leaks -q a.out");
-// }
-
-// int	main(void)
-// {
-// 	int	test1;
-// 	int	test2;
-// 	int	test3;
-// 	int	test4;
-// 	int	test5;
-// 	int	test6;
-// 	int	test7;
-// 	int	test8;
-// 	int	test9;
-// 	int	test10;
-
-// 	ft_printf("ft_printf:\n");
-// 	test1 = ft_printf("Hello World!\n");
-// 	test2 = ft_printf("Hello %s!\n", "World");
-// 	test3 = ft_printf("Hello %d!\n", 42);
-// 	test4 = ft_printf("Hello %p!\n", &test1);
-// 	test5 = ft_printf("Hello %x!\n", 42);
-// 	test6 = ft_printf("Hello %X!\n", 42);
-// 	test7 = ft_printf("Hello %c!\n", 'c');
-// 	test8 = ft_printf("Hello %%!\n");
-// 	test9 = ft_printf("Hello %u!\n", 42);
-// 	test10 = ft_printf("null -> %s\n", NULL);
-// 	ft_printf("\nprintf:\n");
-
-// 	return (0);
-// }
