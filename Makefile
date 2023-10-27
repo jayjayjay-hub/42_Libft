@@ -33,14 +33,16 @@ GNL			= get_next_line.c        get_next_line_utils.c
 FTPRINTF_DIR	= ft_printf/
 FTPRINTF		= ft_printf.c      output.c         print_hex.c      print_ptr.c      unsigned_itoa.c
 
-SRC += $(addprefix $(SRC_DIR), $(FTIS))
-SRC += $(addprefix $(SRC_DIR), $(FTMEM))
-SRC += $(addprefix $(SRC_DIR), $(FTPUT))
-SRC += $(addprefix $(SRC_DIR), $(FTTO))
-SRC += $(addprefix $(SRC_DIR), $(FTSTR))
-SRC += $(addprefix $(SRC_DIR), $(FTLST))
-SRC += $(addprefix $(SRC_DIR), $(GNL))
-SRC += $(addprefix $(SRC_DIR), $(FTPRINTF))
+SRC_FILES += $(addprefix $(FTIS_DIR), $(FTIS))
+SRC_FILES += $(addprefix $(FTMEM_DIR), $(FTMEM))
+SRC_FILES += $(addprefix $(FTPUT_DIR), $(FTPUT))
+SRC_FILES += $(addprefix $(FTTO_DIR), $(FTTO))
+SRC_FILES += $(addprefix $(FTSTR_DIR), $(FTSTR))
+SRC_FILES += $(addprefix $(FTLST_DIR), $(FTLST))
+SRC_FILES += $(addprefix $(GNL_DIR), $(GNL))
+SRC_FILES += $(addprefix $(FTPRINTF_DIR), $(FTPRINTF))
+
+SRC += $(addprefix $(SRC_DIR), $(SRC_FILES))
 
 OBJ = $((addprefix $(OBJ_DIR), $(SRC)):.c=.o)
 
