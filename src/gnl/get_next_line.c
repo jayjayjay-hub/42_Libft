@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 static char	*new_file_str(char *file_str)
 {
@@ -118,80 +118,3 @@ char	*get_next_line(int fd)
 	file_str[fd] = new_file_str(file_str[fd]);
 	return (next_line);
 }
-
-// #include <stdio.h>
-// #include <fcntl.h>
-
-// __attribute__((destructor))
-// static void	destructor(void)
-// {
-// 	system("leaks -q a.out");
-// }
-
-// int	main(void)
-// {
-// 	int		fd1;
-// 	int		fd2;
-// 	int		fd3;
-// 	char	*line;
-// 	int		i = 0;
-
-// 	fd1 = open("test/test1.txt", O_RDONLY);
-// 	fd2 = open("test/test2.txt", O_RDONLY);
-// 	fd3 = INT_MAX;
-// 	// fd3 = open("test/test3.txt", O_RDONLY);
-// 	if (fd1 < 0 || fd2 < 0 || fd3 < 0)
-// 		return (0);
-// 	// while (1)
-// 	// {
-// 	// 	line = get_next_line(fd1);
-// 	// 	if (!line)
-// 	// 		break ;
-// 	// 	printf("%s", line);
-// 	// 	free(line);
-// 	// }
-// 	// printf("\n\n\n\n");
-// 	// while (1)
-// 	// {
-// 	// 	line = get_next_line(fd2);
-// 	// 	if (!line)
-// 	// 		break ;
-// 	// 	printf("%s", line);
-// 	// 	free(line);
-// 	// }
-// 	// printf("\n\n\n\n");
-// 	// while (1)
-// 	// {
-// 	// 	line = get_next_line(fd3);
-// 	// 	if (!line)
-// 	// 		break ;
-// 	// 	printf("%s", line);
-// 	// 	free(line);
-// 	// }
-// 	// printf("\n\n\n");
-
-// 	while (i < 10)
-// 	{
-// 		line = get_next_line(fd1);
-// 		printf("test1 : %s\n", line);
-// 		free(line);
-
-// 		line = get_next_line(fd2);
-// 		printf("test2 : %s\n", line);
-// 		free(line);
-
-// 		line = get_next_line(fd3);
-// 		printf("test3 : %s\n", line);
-// 		free(line);
-// 		i++;
-// 	}
-// 	printf("\n\n\n");
-
-// 	line = get_next_line(1);
-// 	printf("%s", line);
-// 	free(line);
-// 	close(fd1);
-// 	close(fd2);
-// 	close(fd3);
-// 	return (0);
-// }
