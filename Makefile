@@ -48,7 +48,7 @@ all: $(OBJ_DIR) ${NAME}
 ${NAME}: ${OBJS}
 	$(AR) $(ARFLAGS) ${NAME} ${OBJS}
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c | $(OBJD)
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@ 
 
 $(OBJ_DIR):
