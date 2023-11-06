@@ -6,16 +6,6 @@
 	<b><i>YOUR VERY FIRST OWN LIBRARY</i></b><br>
 </p>
 
-<h3 align="center">
-	<a href="#%EF%B8%8F-about">About</a>
-	<span> · </span>
-	<a href="#%EF%B8%8F-usage">Usage</a>
-	<span> · </span>
-	<a href="#-testing">Testing</a>
-</h3>
-
----
-
 ## 💡 About the project
 
 > _The aim of this project is to code a C library regrouping usual functions that you'll be allowed to use in all your other projects._
@@ -24,9 +14,6 @@
 	This project gives you the opportunity to rewrite those functions to understand them and learn to use them.
 	The library will help you for your future projects in C. Through this project, you have the opportunity
 	to extend your list of functions in your own way!
-
-**NOTE:** To be successful with moulinette on this project I had to put all the files in the same directory.
-I have just put them in folders and modified the Makefile to have a better organized repository.
 
 ## List of functions:
 
