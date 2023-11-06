@@ -5,17 +5,8 @@ OBJ_DIR		= .obj/
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -I
 ARFLAGS		= rcs
-ECHO		= echo -n -e
 RM			= rm -rf
 NORM		= norminette
-
-#Colors
-
-MAGENTA		=	'\e[35m'
-CYAN		=	'\e[36m'
-GREEN		=	'\e[32m'
-RED			=	'\e[31m'
-RESET		=	'\e[m'
 
 LIBFT_DIR	= libft/
 LIBFT_SRC	= ft_isalnum.c  ft_isalpha.c  ft_isascii.c  ft_isdigit.c  ft_isprint.c\
@@ -49,7 +40,7 @@ ${NAME}: ${OBJS}
 	$(AR) $(ARFLAGS) ${NAME} ${OBJS}
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@ 
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)
