@@ -5,7 +5,6 @@ OBJ_DIR		= .obj/
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror -I
 ARFLAGS		= rcs
-ECHO		= echo -n -e
 RM			= rm -rf
 NORM		= norminette
 
