@@ -9,14 +9,6 @@ ECHO		= echo -n -e
 RM			= rm -rf
 NORM		= norminette
 
-#Colors
-
-MAGENTA		=	'\e[35m'
-CYAN		=	'\e[36m'
-GREEN		=	'\e[32m'
-RED			=	'\e[31m'
-RESET		=	'\e[m'
-
 LIBFT_DIR	= libft/
 LIBFT_SRC	= ft_isalnum.c  ft_isalpha.c  ft_isascii.c  ft_isdigit.c  ft_isprint.c\
 				ft_bzero.c    ft_calloc.c   ft_memchr.c   ft_memcmp.c   ft_memcpy.c   ft_memmove.c  ft_memset.c\
