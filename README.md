@@ -1,2 +1,110 @@
-# libft
-The aim of this project is to code a C library regrouping usual functions that we’ll be allowed to use in all our other projects. 
+<h1 align="center">
+	libft
+</h1>
+
+<p align="center">
+	<b><i>YOUR VERY FIRST OWN LIBRARY</i></b><br>
+</p>
+
+## 💡 About the project
+
+> _The aim of this project is to code a C library regrouping usual functions that you'll be allowed to use in all your other projects._
+
+	Programming in C can be very tedious when you don't have access to the very useful standard functions.
+	This project gives you the opportunity to rewrite those functions to understand them and learn to use them.
+	The library will help you for your future projects in C. Through this project, you have the opportunity
+	to extend your list of functions in your own way!
+
+## List of functions:
+
+### Functions from `<ctype.h>` library
+
+* ft_isascii			
+* ft_isalnum			
+* ft_isalpha			
+* ft_isdigit			
+* ft_isprint			
+* ft_tolower			
+* ft_toupper			
+
+### Functions from `<stdlib.h>` library
+
+* ft_atoi
+* ft_calloc
+
+### Functions from `<strings.h>` library
+
+* ft_bzero
+* ft_memset
+* ft_memchr
+* ft_memcmp
+* ft_memmove
+* ft_memcpy
+
+### Functions from `<string.h>` library
+
+* ft_strlen
+* ft_strchr
+* ft_strrchr
+* ft_strnstr
+* ft_strncmp
+* ft_strdup
+* ft_strlcpy
+* ft_strlcat
+
+### Non-standard functions
+
+* ft_itoa
+* ft_substr
+* ft_strtrim
+* ft_strjoin
+* ft_split
+* ft_strmapi
+* ft_putchar_fd
+* ft_putstr_fd
+* ft_putendl_fd
+* ft_putnbr_fd
+
+### Linked list functions (bonus)
+
+* ft_lstnew
+* ft_lstsize
+* ft_lstlast
+* ft_lstadd_back
+* ft_lstadd_front
+* ft_lstdelone
+* ft_lstclear
+* ft_lstiter
+* ft_lstmap
+
+## 🛠️ Usage
+
+### Requirements
+
+The library is written in C language and needs the **`cc` compiler** and some standard **C libraries** to run.
+
+### Instructions
+
+**1. Compiling the library**
+
+To compile the library, go to its path and run:
+
+For all mandatory functions:
+
+```shell
+$ make
+```
+
+For bonus functions:
+
+```shell
+$ make bonus
+```
+
+**2. Cleaning all binary (.o) and executable files (.a)**
+
+To clean all files generated while doing a make, go to the path and run:
+
+```shell
+$ make fclean
+```
