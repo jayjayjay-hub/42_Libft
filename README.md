@@ -1,5 +1,5 @@
 <h1 align="center">
-	libft
+	libft(Projects at 42tokyo)
 </h1>
 
 <p align="center">
@@ -77,6 +77,25 @@
 * ft_lstiter
 * ft_lstmap
 
+## 🚀 Updates
+
+### Additional Projects
+
+#### [get_next_line](https://github.com/jayjayjay-hub/get_next_line)
+
+> _This project, [get_next_line](https://github.com/jayjayjay-hub/get_next_line), has been integrated into this `libft` as an additional feature._
+
+- The [get_next_line](https://github.com/jayjayjay-hub/get_next_line) project is designed to read a line from a file descriptor.
+
+#### [ft_printf](https://github.com/jayjayjay-hub/ft_printf)
+
+> _Another project, [ft_printf](https://github.com/jayjayjay-hub/ft_printf), has been added to this `libft` as well._
+
+- [ft_printf](https://github.com/jayjayjay-hub/ft_printf) is a lightweight function to the standard printf function.
+
+These additions extend the utility of the `libft` library, providing you with a broader range of functions to leverage in your projects at 42tokyo.
+
+
 ## 🛠️ Usage
 
 ### Requirements
@@ -89,16 +108,8 @@ The library is written in C language and needs the **`cc` compiler** and some st
 
 To compile the library, go to its path and run:
 
-For all mandatory functions:
-
 ```shell
 $ make
-```
-
-For bonus functions:
-
-```shell
-$ make bonus
 ```
 
 **2. Cleaning all binary (.o) and executable files (.a)**
