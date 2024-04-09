@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 13:14:48 by jtakahas          #+#    #+#             */
-/*   Updated: 2023/10/09 16:16:10 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/04/09 09:51:02 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 100
-#  define OPEN_MAX 1024
 # endif
 
+# define OPEN_MAX 1024
 char	*get_next_line(int fd);
-size_t	ft_strlen(const char *str);
-char	*ft_strchr(char *str, int c);
-char	*ft_strjoin(char *str, char *buf);
+size_t	ft_strlen_gnl(const char *str);
+char	*ft_strchr_gnl(char *str, int c);
+char	*ft_strjoin_gnl(char *str, char *buf);
 #endif
