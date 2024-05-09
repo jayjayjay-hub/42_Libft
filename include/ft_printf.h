@@ -6,16 +6,19 @@
 /*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/04 12:54:48 by jtakahas          #+#    #+#             */
-/*   Updated: 2023/10/02 19:42:22 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/05/09 17:16:01 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# define LEN_NULL_STR 6
-
+# include "libft.h"
 # include <stdarg.h>
+
+# ifndef LEN_NULL_STR
+#  define LEN_NULL_STR 6
+# endif
 
 int		ft_printf(const char *str, ...);
 int		print_str(char *str);
