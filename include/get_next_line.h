@@ -6,7 +6,7 @@
 /*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 13:14:48 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/05/09 17:16:46 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/05/09 17:27:13 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@
 # ifndef OPEN_MAX
 #  define OPEN_MAX 1024
 # endif
+
 char	*get_next_line(int fd);
-size_t	ft_strlen_gnl(const char *str);
-char	*ft_strchr_gnl(char *str, int c);
-char	*ft_strjoin_gnl(char *str, char *buf);
+size_t	gnl_strlen(const char *str);
+char	*gnl_strchr(char *str, int c);
+char	*gnl_strjoin(char *str, char *buf);
 #endif

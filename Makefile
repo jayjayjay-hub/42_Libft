@@ -1,9 +1,10 @@
 NAME		= libft
-INCLUDE		= include/
+INCLUDE_DIR	= include/
+INCLUDE		= -I $(INCLUDE_DIR)
 SRC_DIR		= src/
 OBJ_DIR		= .obj/
 CC			= cc
-CFLAGS		= -Wall -Wextra -Werror -I
+CFLAGS		= -Wall -Wextra -Werror
 ARFLAGS		= rcs
 RM			= rm -rf
 NORM		= norminette
@@ -57,8 +58,8 @@ fclean: clean
 re: fclean all
 
 norm:
-	@echo -n libft_norminette :
-	@norminette $(SRCS) $(INCLUDE) | grep Error || true
-	@echo " finish"
+	@echo "libft_norminette : ↓↓ error count ↓↓"
+	@norminette $(SRCS) $(INCLUDE_DIR) | grep Error | wc -l
+	@norminette $(SRCS) $(INCLUDE_DIR) | grep Error || true
 
 .PHONY : all bouns clean fclean re norm
