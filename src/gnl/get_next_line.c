@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 13:14:26 by jtakahas          #+#    #+#             */
-/*   Updated: 2023/10/09 19:41:23 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/04/09 09:52:23 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static char	*new_file_str(char *file_str)
 		free(file_str);
 		return (NULL);
 	}
-	new_file_str = malloc(sizeof(char) * ((ft_strlen(file_str) - i) + 1));
+	new_file_str = malloc(sizeof(char) * ((ft_strlen_gnl(file_str) - i) + 1));
 	if (!new_file_str)
 	{
 		free(file_str);
@@ -81,7 +81,7 @@ static char	*read_file_str(int fd, char *file_str)
 		return (NULL);
 	}
 	read_byte = 1;
-	while (file_str && read_byte && (ft_strchr(file_str, '\n') == NULL))
+	while (file_str && read_byte && (ft_strchr_gnl(file_str, '\n') == NULL))
 	{
 		read_byte = read(fd, buf, BUFFER_SIZE);
 		if (read_byte == -1)
@@ -91,7 +91,7 @@ static char	*read_file_str(int fd, char *file_str)
 			return (NULL);
 		}
 		buf[read_byte] = '\0';
-		file_str = ft_strjoin(file_str, buf);
+		file_str = ft_strjoin_gnl(file_str, buf);
 	}
 	free(buf);
 	return (file_str);
