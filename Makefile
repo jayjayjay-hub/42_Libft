@@ -120,7 +120,7 @@ fclean: clean
 re: fclean all
 
 norm:
-	@echo "libft_norminette : ↓↓ error count ↓↓"
+	@echo "↓↓↓ libft error count ↓↓↓"
 	@norminette $(SRCS) $(INCLUDE_DIR) | grep Error | wc -l
 	@norminette $(SRCS) $(INCLUDE_DIR) | grep Error || true
 
