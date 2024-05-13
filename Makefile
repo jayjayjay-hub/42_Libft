@@ -91,31 +91,50 @@ OBJ_FILES 	= $(SRC_FILES:%.c=%.o)
 SRCS 		= $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJS 		= $(addprefix $(OBJ_DIR), $(OBJ_FILES))
 
+Y 			= "\033[33m"
+R 			= "\033[31m"
+G 			= "\033[32m"
+B 			= "\033[34m"
+X 			= "\033[0m"
+UP 			= "\033[A"
+CUT 		= "\033[K"
+
 all: ${NAME}
 
 ${NAME}: $(OBJ_DIR) ${OBJS}
+	@echo $(B) "archiving" $(X)
 	$(AR) $(ARFLAGS) ${NAME} ${OBJS}
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
+	@echo $(Y) "compiling" $(X) $<
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@echo "\n"
 
 $(OBJ_DIR):
-	mkdir $(OBJ_DIR)
-	mkdir $(OBJ_DIR)$(LIBFT_DIR)
-	mkdir $(OBJ_DIR)$(LIBFT_DIR)$(STDLIB_DIR)
-	mkdir $(OBJ_DIR)$(LIBFT_DIR)$(CTYPE_DIR)
-	mkdir $(OBJ_DIR)$(LIBFT_DIR)$(MEM_DIR)
-	mkdir $(OBJ_DIR)$(LIBFT_DIR)$(STR_DIR)
-	mkdir $(OBJ_DIR)$(LIBFT_DIR)$(FD_DIR)
-	mkdir $(OBJ_DIR)$(LIBFT_DIR)$(LST_DIR)
-	mkdir $(OBJ_DIR)$(GNL_DIR)
-	mkdir $(OBJ_DIR)$(FTPRINTF_DIR)
+	@echo $(G) "creating obj directory..." $(X)
+	@mkdir $(OBJ_DIR)
+	@mkdir $(OBJ_DIR)$(LIBFT_DIR)
+	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(STDLIB_DIR)
+	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(CTYPE_DIR)
+	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(MEM_DIR)
+	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(STR_DIR)
+	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(FD_DIR)
+	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(LST_DIR)
+	@mkdir $(OBJ_DIR)$(GNL_DIR)
+	@mkdir $(OBJ_DIR)$(FTPRINTF_DIR)
+	@echo $(G) "obj directory created" $(X)
+	@echo "\n"
 
 clean:
+	@echo $(R) "cleaning" $(X)
 	${RM} ${OBJ_DIR}
+	@echo "\n"
 
-fclean: clean
+fclean:
+	@echo $(R) "fcleaning" $(X)
+	${RM} ${OBJ_DIR}
 	${RM} ${NAME}
+	@echo "\n"
 
 re: fclean all
 
