@@ -24,6 +24,7 @@
 * ft_isalpha
 * ft_isdigit
 * ft_isprint
+* ft_isspace
 * ft_tolower
 * ft_toupper
 
@@ -31,6 +32,7 @@
 
 * ft_atoi
 * ft_calloc
+* ft_abs
 
 ### Functions from `<strings.h>` library
 
