@@ -106,16 +106,18 @@ CUT 		= "\033[K"
 all: ${NAME}
 
 ${NAME}: $(OBJ_DIR) ${OBJS}
-	@echo $(B) "archiving" $(X)
-	$(AR) $(ARFLAGS) ${NAME} ${OBJS}
+	@echo $(Y) "successfully compiled\n" $(X)
+	@echo $(B) "$(NAME) archiving\n" $(X)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@echo $(G) "!! $(NAME) created !!" $(X)
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	@echo $(Y) "compiling" $(X) $<
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
-	@echo "\n"
+	@echo $(Y) "compiling $< " $(X)
+	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@printf $(UP)$(CUT)
+
 
 $(OBJ_DIR):
-	@echo $(G) "creating obj directory..." $(X)
 	@mkdir $(OBJ_DIR)
 	@mkdir $(OBJ_DIR)$(LIBFT_DIR)
 	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(STDLIB_DIR)
@@ -126,25 +128,21 @@ $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)$(LIBFT_DIR)$(LST_DIR)
 	@mkdir $(OBJ_DIR)$(GNL_DIR)
 	@mkdir $(OBJ_DIR)$(FTPRINTF_DIR)
-	@echo $(G) "obj directory created" $(X)
-	@echo "\n"
 
 clean:
-	@echo $(R) "cleaning" $(X)
+	@echo $(R) "cleaning \n" $(X)
 	${RM} ${OBJ_DIR}
-	@echo "\n"
 
 fclean:
-	@echo $(R) "fcleaning" $(X)
-	${RM} ${OBJ_DIR}
-	${RM} ${NAME}
-	@echo "\n"
+	@echo $(R) "fcleaning \n" $(X)
+	@${RM} ${OBJ_DIR}
+	@${RM} ${NAME}
 
 re: fclean all
 
 norm:
 	@echo $(R) "<<< libft error count >>>" $(X)
-	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error | wc -l
+	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error | grep -v Error! | wc -l
 	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error || true
 
 .PHONY : all bouns clean fclean re norm
