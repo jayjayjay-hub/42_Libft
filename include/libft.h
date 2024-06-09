@@ -6,7 +6,7 @@
 /*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:13:09 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/05/13 16:13:15 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/06/09 18:39:09 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <limits.h>
+
+# include "ft_printf.h"
+
+// define colors
+# define RED	"\033[1m\033[31m"
+# define GREEN	"\033[1m\033[32m"
+# define ENDC	"\033[0m"
 
 typedef struct s_list
 {
@@ -75,5 +82,8 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	put_message(char *main_message, char *sub_message);
+// error
+void	error_handler(char *main_message, char *sub_message);
 
 #endif

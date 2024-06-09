@@ -50,7 +50,8 @@ STR_SRC		=	ft_strjoin.c\
 				ft_strncmp.c\
 				ft_strdup.c\
 				ft_split.c\
-				ft_striteri.c
+				ft_striteri.c\
+				put_message.c
 
 FD_DIR		= fd/
 FD_SRC		=	ft_putchar_fd.c\
@@ -68,6 +69,9 @@ LST_SRC		=	ft_lstadd_back.c\
 				ft_lstmap.c\
 				ft_lstnew.c\
 				ft_lstsize.c
+
+ERROR_DIR	= error/
+ERROR_SRC	=	error.c
 
 LIBFT_SRC	+= $(addprefix $(STDLIB_DIR), $(STDLIB_SRC))
 LIBFT_SRC	+= $(addprefix $(CTYPE_DIR), $(CTYPE_SRC))
@@ -139,8 +143,8 @@ fclean:
 re: fclean all
 
 norm:
-	@echo "↓↓↓ libft error count ↓↓↓"
-	@norminette $(SRCS) $(INCLUDE_DIR) | grep Error | wc -l
-	@norminette $(SRCS) $(INCLUDE_DIR) | grep Error || true
+	@echo $(R) "<<< libft error count >>>" $(X)
+	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error | wc -l
+	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error || true
 
 .PHONY : all bouns clean fclean re norm
