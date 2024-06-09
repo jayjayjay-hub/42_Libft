@@ -131,7 +131,7 @@ $(OBJ_DIR):
 
 clean:
 	@echo $(R) "cleaning \n" $(X)
-	${RM} ${OBJ_DIR}
+	@${RM} ${OBJ_DIR}
 
 fclean:
 	@echo $(R) "fcleaning \n" $(X)
