@@ -1,15 +1,27 @@
+# project name
 NAME		= libft
+
+# include
 INCLUDE_DIR	= include/
+
+# include option
 INCLUDE		= -I $(INCLUDE_DIR)
-SRC_DIR		= src/
-OBJ_DIR		= .obj/
+
+# compiler
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
+
+# アーカイブ
 AR			= ar
 ARFLAGS		= rcs
+
+SRC_DIR		= src/
+OBJ_DIR		= .obj/
+
 RM			= rm -rf
 NORM		= norminette
 
+# file path
 LIBFT_DIR	= std_libft/
 
 STDLIB_DIR	= stdlib/
@@ -95,6 +107,7 @@ OBJ_FILES 	= $(SRC_FILES:%.c=%.o)
 SRCS 		= $(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJS 		= $(addprefix $(OBJ_DIR), $(OBJ_FILES))
 
+# ********************************************************coler
 Y 			= "\033[33m"
 R 			= "\033[31m"
 G 			= "\033[32m"
@@ -102,7 +115,9 @@ B 			= "\033[34m"
 X 			= "\033[0m"
 UP 			= "\033[A"
 CUT 		= "\033[K"
+# *************************************************************
 
+# ****************************************************普通のmake
 all: ${NAME}
 
 ${NAME}: $(OBJ_DIR) ${OBJS}
@@ -110,12 +125,12 @@ ${NAME}: $(OBJ_DIR) ${OBJS}
 	@echo $(B) "$(NAME) archiving\n" $(X)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 	@echo $(G) "!! $(NAME) created !!" $(X)
+# *************************************************************
 
 $(OBJ_DIR)%.o: $(SRC_DIR)%.c
-	@echo $(Y) "compiling $< " $(X)
+	@echo $(Y) "Compiling $< " $(X)
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 	@printf $(UP)$(CUT)
-
 
 $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)
@@ -130,18 +145,18 @@ $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)$(FTPRINTF_DIR)
 
 clean:
-	@echo $(R) "cleaning \n" $(X)
+	@echo $(R) "$(NAME) cleaning \n" $(X)
 	@${RM} ${OBJ_DIR}
 
 fclean:
-	@echo $(R) "fcleaning \n" $(X)
+	@echo $(R) "$(NAME) fcleaning \n" $(X)
 	@${RM} ${OBJ_DIR}
 	@${RM} ${NAME}
 
 re: fclean all
 
 norm:
-	@echo $(R) "<<< libft error count >>>" $(X)
+	@echo $(R) "<<< $(NAME) error count >>>" $(X)
 	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error | grep -v Error! | wc -l
 	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error || true
 
