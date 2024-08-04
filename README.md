@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-	<b><i>YOUR VERY FIRST OWN LIBRARY</i></b><br>
+	<b><i>Final Score 125/100</i></b><br>
 </p>
 
 ## 💡 About the project
