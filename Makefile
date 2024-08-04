@@ -1,5 +1,5 @@
 # project name
-NAME		= libft
+NAME		= libft.a
 
 # include
 INCLUDE_DIR	= include/
@@ -38,7 +38,8 @@ CTYPE_SRC	=	ft_isalnum.c\
 				ft_isprint.c\
 				ft_isspace.c\
 				ft_tolower.c\
-				ft_toupper.c
+				ft_toupper.c\
+				pass_space.c
 
 MEM_DIR		= mem/
 MEM_SRC		=	ft_bzero.c\
