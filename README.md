@@ -27,6 +27,7 @@
 * ft_isspace
 * ft_tolower
 * ft_toupper
+* pass_space
 
 ### Functions from `<stdlib.h>` library
 
