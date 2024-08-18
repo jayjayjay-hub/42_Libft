@@ -1,23 +1,30 @@
-# project name
+# Makefile
+MAKEFILE	= Makefile
+
+# lib name
 NAME		= libft.a
 
-# include
-INCLUDE_DIR	= include/
-
-# include option
-INCLUDE		= -I $(INCLUDE_DIR)
-
-# compiler
-CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
-
-# アーカイブ
-AR			= ar
-ARFLAGS		= rcs
-
+# ソースファイルとオブジェクトファイルのディレクトリ
 SRC_DIR		= src/
 OBJ_DIR		= .obj/
 
+# インクルードディレクトリ
+INCLUDE_DIR	= include/
+INCLUDE		= -I $(INCLUDE_DIR)
+HEADERS		= $(wildcard $(INCLUDE_DIR)*.h)
+
+# 依存ファイル
+DEPS		= $(MAKEFILE) $(HEADERS)
+
+# コンパイル設定
+CC			= cc
+CFLAGS		= -Wall -Wextra -Werror
+
+# アーカイブ設定
+AR			= ar
+ARFLAGS		= rcs
+
+# クリーンアップコマンド
 RM			= rm -rf
 NORM		= norminette
 
@@ -122,13 +129,17 @@ CUT 		= "\033[K"
 all: ${NAME}
 
 ${NAME}: $(OBJ_DIR) ${OBJS}
-	@echo $(Y) "successfully compiled\n" $(X)
-	@echo $(B) "$(NAME) archiving\n" $(X)
+	@printf $(UP)$(CUT)
+	@echo
+	@echo $(Y) "$(NAME) src files successfully compiled" $(X)
+	@echo "$(NAME) archiving ..."
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJS)
+	@printf $(UP)$(CUT)
 	@echo $(G) "!! $(NAME) created !!" $(X)
+	@echo
 # *************************************************************
 
-$(OBJ_DIR)%.o: $(SRC_DIR)%.c
+$(OBJ_DIR)%.o: $(SRC_DIR)%.c $(DEPS)
 	@echo $(Y) "Compiling $< " $(X)
 	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 	@printf $(UP)$(CUT)
@@ -146,11 +157,13 @@ $(OBJ_DIR):
 	@mkdir $(OBJ_DIR)$(FTPRINTF_DIR)
 
 clean:
-	@echo $(R) "$(NAME) cleaning \n" $(X)
+	@printf $(UP)$(CUT)
+	@echo $(R) "$(NAME) cleaning" $(X)
 	@${RM} ${OBJ_DIR}
 
 fclean:
-	@echo $(R) "$(NAME) fcleaning \n" $(X)
+	@printf $(UP)$(CUT)
+	@echo $(R) "$(NAME) fcleaning" $(X)
 	@${RM} ${OBJ_DIR}
 	@${RM} ${NAME}
 
