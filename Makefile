@@ -157,6 +157,7 @@ fclean:
 re: fclean all
 
 norm:
+	@printf $(UP)$(CUT)
 	@echo $(R) "<<< $(NAME) error count >>>" $(X)
 	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error | grep -v Error! | wc -l
 	@norminette $(SRC_DIR) $(INCLUDE_DIR) | grep Error || true
