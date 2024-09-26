@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:13:09 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/08/05 01:30:08 by jay              ###   ########.fr       */
+/*   Updated: 2024/09/26 19:08:10 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdint.h>
 # include <limits.h>
+# include <stdbool.h>
 
 # include "ft_printf.h"
 
@@ -30,6 +31,13 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+/* defining the structure for the allocations */
+typedef struct s_allocations
+{
+	void					*ptr;
+	struct s_allocations	*next;
+}	t_allocations;
 
 // ctype
 int		ft_isalnum(int c);
@@ -85,6 +93,11 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	put_message(char *main_message, char *sub_message);
 // error
-void	error_handler(char *main_message, char *sub_message);
+void	error_message(char *main_msg, char *sub_msg);
+
+// malloc
+void	*ft_malloc(size_t size, t_allocations **allocations);
+bool	add_allocations(void *ptr, t_allocations **allocations);
+void	free_allocations(t_allocations **allocations);
 
 #endif
