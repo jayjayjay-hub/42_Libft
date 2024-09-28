@@ -6,7 +6,7 @@
 /*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:13:09 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/09/29 00:10:00 by jay              ###   ########.fr       */
+/*   Updated: 2024/09/29 01:03:34 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ void	put_message(char *main_message, char *sub_message);
 // error
 void	error_message(char *main_msg, char *sub_msg);
 void	error_exit(char *main_msg, char *sub_msg);
+void	error_exit_free(char *main_msg, char *sub_msg,
+			t_allocations *allocations);
 // malloc
 void	*ft_malloc(size_t size, t_allocations **allocations);
 bool	add_allocations(void *ptr, t_allocations **allocations);
