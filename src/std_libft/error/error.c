@@ -6,7 +6,7 @@
 /*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 18:31:34 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/09/29 00:11:39 by jay              ###   ########.fr       */
+/*   Updated: 2024/09/29 01:03:41 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,13 @@ void	error_message(char *main_msg, char *sub_msg)
 void	error_exit(char *main_msg, char *sub_msg)
 {
 	error_message(main_msg, sub_msg);
+	exit(1);
+}
+
+void	error_exit_free(char *main_msg, char *sub_msg,
+			t_allocations *allocations)
+{
+	error_message(main_msg, sub_msg);
+	free_allocations(&allocations);
 	exit(1);
 }
