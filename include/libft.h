@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:13:09 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/09/26 19:08:10 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/09/29 00:10:00 by jay              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	put_message(char *main_message, char *sub_message);
 // error
 void	error_message(char *main_msg, char *sub_msg);
-
+void	error_exit(char *main_msg, char *sub_msg);
 // malloc
 void	*ft_malloc(size_t size, t_allocations **allocations);
 bool	add_allocations(void *ptr, t_allocations **allocations);
