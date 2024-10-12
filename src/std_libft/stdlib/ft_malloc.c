@@ -6,7 +6,7 @@
 /*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:16:28 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/09/26 19:03:42 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/10/12 12:54:09 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,25 @@ void	*ft_malloc(size_t size, t_allocations **allocations)
 		free(ptr);
 		free_allocations(allocations);
 		return (NULL);
+	}
+	return (ptr);
+}
+
+void	*malloxit(size_t size, t_allocations **allocations)
+{
+	void	*ptr;
+
+	ptr = malloc(size);
+	if (ptr == NULL)
+	{
+		free_allocations(allocations);
+		error_exit("Malloc failed", NULL);
+	}
+	if (!add_allocations(ptr, allocations))
+	{
+		free(ptr);
+		free_allocations(allocations);
+		error_exit("Malloc failed", NULL);
 	}
 	return (ptr);
 }
