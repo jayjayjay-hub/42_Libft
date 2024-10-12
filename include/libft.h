@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:13:09 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/09/29 01:03:34 by jay              ###   ########.fr       */
+/*   Updated: 2024/10/12 13:12:07 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void	error_exit_free(char *main_msg, char *sub_msg,
 			t_allocations *allocations);
 // malloc
 void	*ft_malloc(size_t size, t_allocations **allocations);
+void	*malloxit(size_t size, t_allocations **allocations);
 bool	add_allocations(void *ptr, t_allocations **allocations);
 void	free_allocations(t_allocations **allocations);
 
