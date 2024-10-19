@@ -68,6 +68,7 @@ STR_SRC		=	ft_strjoin.c\
 				ft_strlen.c\
 				ft_strtrim.c\
 				ft_substr.c\
+				ft_strcmp.c\
 				ft_strncmp.c\
 				ft_strdup.c\
 				ft_split.c\
