@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   pass_space.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 01:28:10 by jay               #+#    #+#             */
-/*   Updated: 2024/08/05 01:29:46 by jay              ###   ########.fr       */
+/*   Updated: 2024/10/29 14:14:47 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	pass_space(char *str)
+void	pass_space(char **str)
 {
-	if (!str)
+	if (!str | !*str)
 		return ;
-	while (ft_isspace(*str))
-		str++;
+	while (ft_isspace(**str))
+		(*str)++;
 }
