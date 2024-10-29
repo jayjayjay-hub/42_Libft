@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 20:13:09 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/10/20 04:03:00 by jay              ###   ########.fr       */
+/*   Updated: 2024/10/29 14:29:34 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isspace(int nbr);
-void	pass_space(char *str);
+void	pass_space(char **str);
 // fd
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
