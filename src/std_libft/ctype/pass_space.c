@@ -6,7 +6,7 @@
 /*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 01:28:10 by jay               #+#    #+#             */
-/*   Updated: 2024/10/29 14:14:47 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:17:21 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	pass_space(char **str)
 {
-	if (!str | !*str)
+	if (!str || !*str)
 		return ;
 	while (ft_isspace(**str))
 		(*str)++;
