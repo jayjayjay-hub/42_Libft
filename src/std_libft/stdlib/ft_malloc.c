@@ -6,7 +6,7 @@
 /*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:16:28 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/11/03 18:35:35 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:57:57 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	*ft_malloc(size_t size, t_allocations **allocations)
 	{
 		free(ptr);
 		free_allocations(allocations);
+		error_message("Malloc failed", NULL);
 		return (NULL);
 	}
 	return (ptr);
