@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jay <jay@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 18:31:34 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/09/29 01:03:41 by jay              ###   ########.fr       */
+/*   Updated: 2024/11/03 18:27:13 by jtakahas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	error_message(char *main_msg, char *sub_msg)
 {
-	printf(RED"Error: %s"ENDC, main_msg);
+	ft_printf(RED"Error: %s"ENDC, main_msg);
 	if (sub_msg)
-		printf("%s", sub_msg);
-	printf("\n");
+		ft_printf("%s", sub_msg);
+	ft_printf("\n");
 }
 
 void	error_exit(char *main_msg, char *sub_msg)
