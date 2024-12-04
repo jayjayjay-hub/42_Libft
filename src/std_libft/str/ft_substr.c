@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jtakahas <jtakahas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kosnakam <kosnakam@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 15:45:53 by jtakahas          #+#    #+#             */
-/*   Updated: 2024/11/03 19:15:45 by jtakahas         ###   ########.fr       */
+/*   Updated: 2024/12/04 15:04:11 by kosnakam         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len, t_allocations **alloc)
+char	*ft_substr(char const *s, unsigned int start,
+				size_t len, t_allocations **alloc)
 {
 	char	*newarray;
 	size_t	len_s;
